@@ -6,6 +6,7 @@ public class MultiplicationTable {
         new MultiplicationTable().TABEL();
     }
 
+    // 1 2 3 4 5 6 7 8 9 10
     // 2 4 6 8 10 12 14 16 18 20
     // 3 6 9 12 15 18 21 24 27 30
     // 4 8 12 16 20 24 28 32 36 40
@@ -17,6 +18,23 @@ public class MultiplicationTable {
     // 10 20 30 40 50 60 70 80 90 100
 
     public void TABEL(){
+        int[][] bla;
+        bla = createTable();
+        for(int i =0; i< 10; i++){
+            for(int x =0; x< 10; x++){
+                System.out.printf("%-3d ", bla[i][x]);
+            }
+            System.out.printf("\n");
+        }
+    }
 
+    private int[][] createTable(){
+        int[][] output = new int[10][10];
+        for(int i =0; i< 10; i++){
+            for(int x =0; x< 10; x++){
+                output[i][x] = (i+1)*(x+1);
+            }
+        }
+        return output;
     }
 }
