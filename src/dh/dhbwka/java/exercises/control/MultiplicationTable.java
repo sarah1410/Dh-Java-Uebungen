@@ -3,7 +3,7 @@ package dh.dhbwka.java.exercises.control;
 public class MultiplicationTable {
 
     public static void main(String[] args) {
-        new MultiplicationTable().TABEL();
+        new MultiplicationTable().TABEL(50,100);
     }
 
     // 1 2 3 4 5 6 7 8 9 10
@@ -17,24 +17,12 @@ public class MultiplicationTable {
     // 9 18 27 36 45 54 63 72 81 90
     // 10 20 30 40 50 60 70 80 90 100
 
-    public void TABEL(){
-        int[][] bla;
-        bla = createTable();
-        for(int i =0; i< 10; i++){
-            for(int x =0; x< 10; x++){
-                System.out.printf("%-3d ", bla[i][x]);
+    public void TABEL(int klein, int klein2){
+        for(int i =0; i< klein; i++){
+            for(int x =0; x< klein2; x++){
+                System.out.printf("%-5d ", (i+1)*(x+1));
             }
             System.out.printf("\n");
         }
-    }
-
-    private int[][] createTable(){
-        int[][] output = new int[10][10];
-        for(int i =0; i< 10; i++){
-            for(int x =0; x< 10; x++){
-                output[i][x] = (i+1)*(x+1);
-            }
-        }
-        return output;
     }
 }
