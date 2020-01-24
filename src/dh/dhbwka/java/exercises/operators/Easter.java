@@ -14,7 +14,7 @@ public class Easter {
     m = (15 + k - p - q) mod 30
     n = (4 + k - q) mod 7
     d = (19a + m) mod 30
-    e = (2b + 4c + 6d + n) mod 7
+    e = (2b + 4c + 6d + n) mod 720
     ostern = (22 + d + e)
      */
 
@@ -35,8 +35,10 @@ public class Easter {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int year = scan.nextInt();
-        int easter = new Easter().Easter(year);
-        System.out.println("Ostern ist bestimmt nicht: "+easter+ " Tage nach dem ersten März.");
+        while(true){
+            int year = scan.nextInt();
+            int easter = new Easter().Easter(year);
+            System.out.println("Ostern ist bestimmt nicht: "+easter+ " Tage nach dem ersten März.");
+        }
     }
 }
