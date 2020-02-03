@@ -7,11 +7,11 @@ public class Quadratics {
     public Quadratics(){
         Scanner scan = new Scanner(System.in);
         System.out.println("geben sie a ein.");
-        int a = scan.nextInt();
+        double a = scan.nextDouble();
         System.out.println("geben sie b ein.");
-        int b = scan.nextInt();
+        double b = scan.nextDouble();
         System.out.println("geben sie c ein.");
-        int c = scan.nextInt();
+        double c = scan.nextDouble();
         solveEquotation(a,b,c);
     }
 
@@ -19,12 +19,12 @@ public class Quadratics {
        new Quadratics();
     }
 
-    public void solveEquotation(int a, int b, int c) {
+    public void solveEquotation(double a, double b, double c) {
         if (a == 0) {
             if (b == 0) {
                 System.out.println("Die Gleichung ist degeniert");
             } else {
-                int erg = -c / b;
+                double erg = -c / b;
                 System.out.println("Die Lösung ist: " + erg);
             }
         } else {
