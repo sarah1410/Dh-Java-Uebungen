@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Quadratics {
 
     public Quadratics(){
-        /*Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("geben sie a ein.");
         int a = scan.nextInt();
         System.out.println("geben sie b ein.");
         int b = scan.nextInt();
         System.out.println("geben sie c ein.");
-        int c = scan.nextInt();*/
-        solveEquotation(1,0,1);
+        int c = scan.nextInt();
+        solveEquotation(a,b,c);
     }
 
     public static void main(String[] args) {
